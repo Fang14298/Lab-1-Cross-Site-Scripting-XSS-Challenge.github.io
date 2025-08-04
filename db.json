@@ -29,6 +29,11 @@
       "id": "4d65",
       "name": "Leo",
       "text": "<img src=\"x\" onerror=\"alert('XSS via img tag!')\">"
+    },
+    {
+      "id": "ef20",
+      "name": "ak'",
+      "text": "d"
     }
   ]
 }

@@ -1,18 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Comment System</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8ffd0 0%, #ffe5d0 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+        }
+        h1 {
+            color: #6b4f1d;
+            font-size: 2rem;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        h2 {
+            color: #4ecb71;
+            font-size: 1.2rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+        #comments-container {
+            margin-bottom: 24px;
+        }
+        .comment {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .comment .name {
+            font-weight: bold;
+            color: #4ecb71;
+        }
+        .comment .date {
+            font-size: 0.85rem;
+            color: #888;
+            float: right;
+        }
+        #comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #name-input, #comment-input {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        #comment-input {
+            min-height: 60px;
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background: linear-gradient(90deg, #4ecb71 60%, #ffd6b0 100%);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #6b4f1d 60%, #ffd6b0 100%);
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 32px 0 24px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>แสดงความคิดเห็น</h1>
-    <div id="comments-container"></div>
-    <hr>
-    <h2>โพสต์คอมเมนต์ใหม่</h2>
-    <form id="comment-form">
-        <input type="text" id="name-input" placeholder="ชื่อ" required>
-        <textarea id="comment-input" placeholder="ความคิดเห็น" required></textarea>
-        <button type="submit">โพสต์</button>
-    </form>
+    <div class="container">
+        <h1>💬 แสดงความคิดเห็น</h1>
+        <div id="comments-container"></div>
+        <hr>
+        <h2>📝 โพสต์คอมเมนต์ใหม่</h2>
+        <form id="comment-form">
+            <input type="text" id="name-input" placeholder="ชื่อ" required>
+            <textarea id="comment-input" placeholder="ความคิดเห็น" required></textarea>
+            <button type="submit">โพสต์</button>
+        </form>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
